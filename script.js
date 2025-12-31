@@ -74,7 +74,7 @@ async function loadWords() {
         const data = await response.json();
         wordsListES = data.es || [];
         wordsListEN = data.en || [];
-        wordsListDE = data.de || data.en || data.es || [];
+        wordsListDE = data.de || [];
     } catch (error) {
         console.error('Error loading words:', error);
         wordsListES = ["error", "loading", "words", "check", "console"];
