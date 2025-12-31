@@ -278,10 +278,15 @@ function initGame(tearPaper = true) {
     if (zenModeEnabled) {
         document.body.classList.add('zen-mode');
         currentWords = [];
+        currentWords = [];
         const cursor = document.createElement('span');
         cursor.className = 'zen-cursor';
         wordsContainer.appendChild(cursor);
         
+        // Ensure layout is updated before measuring
+        requestAnimationFrame(() => {
+            zenBaseTop = cursor.offsetTop;
+        });
         // Ensure layout is updated before measuring
         requestAnimationFrame(() => {
             zenBaseTop = cursor.offsetTop;
@@ -464,6 +469,10 @@ function renderWords(append = false) {
 let typingTimeout;
 
 function updateCursor() {
+    if (zenModeEnabled) {
+        updateZenCursor();
+        return;
+    }
     if (zenModeEnabled) {
         updateZenCursor();
         return;
