@@ -91,7 +91,7 @@ body.dark-mode {
 
 body.dark-mode .desk { background-color: #1a1a1a; }
 body.dark-mode .paper-sheet { background-color: #252525; color: #d1d1d1; border-color: #444; }
-body.dark-mode .sticky-note { background: #332f1a; color: #eee; border-color: #444; }
+body.dark-mode .sticky-note { background: #FFEF5F; color: #eee; border-color: #444; }
 body.dark-mode .word { color: #888; }
 body.dark-mode .letter.correct { color: #fff; }
 
