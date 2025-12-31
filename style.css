@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&family=Inter:wght@400;700&display=swap');
 /* ===== NAVBAR ===== */
 .header {
   width: 100%;
@@ -22,9 +22,10 @@
 
 .logo {
   color: var(--machine-color);
-  font-family: var(--font-typewriter);
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 22px;
+  letter-spacing: -0.5px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -33,8 +34,10 @@
   transition: opacity 0.3s;
 }
 
-.logo i {
-  font-size: 1.2em;
+.logo-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) opacity(0.8);
 }
 
 .logo:hover {
@@ -96,6 +99,10 @@ body.dark-mode .letter.correct { color: #fff; }
 body.dark-mode .logo,
 body.dark-mode .nav-links a {
     color: #ccc;
+}
+
+body.dark-mode .logo-img {
+    filter: brightness(0) invert(0.8);
 }
 
 body.dark-mode .nav-links a:hover {
@@ -173,7 +180,7 @@ body {
     height: 100vh;
     height: 100dvh;
     
-    overflow: hidden;
+        overflow: hidden;
     padding-bottom: 0;
 }
 
