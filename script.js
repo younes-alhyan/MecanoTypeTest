@@ -6,7 +6,8 @@ let wordCount = (storedCount === 'infinite') ? 'infinite' : (parseInt(storedCoun
 let currentLanguage = localStorage.getItem('mecano_language') || 'en';
 let generationMode = localStorage.getItem('mecano_generation_mode') || 'random';
 let zenModeEnabled = localStorage.getItem('mecano_zen_mode') === 'true';
-
+let currentTheme = localStorage.getItem('mecano_theme') || 'light';
+if (currentTheme === 'dark') document.body.classList.add('dark-mode');
 const gameArea = document.getElementById('game-area');
 const wordsContainer = document.getElementById('words');
 const statsContainer = document.getElementById('stats');
@@ -804,6 +805,10 @@ settingsBtn.addEventListener('click', () => {
     document.querySelectorAll('[data-zen]').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.zen === (zenModeEnabled ? 'true' : 'false'));
     });
+    
+document.querySelectorAll('[data-theme]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.theme === currentTheme);
+});
     switchView('settings');
 });
 
@@ -1060,3 +1065,22 @@ if (mobileInput) {
         e.stopPropagation();
     });
 }
+// Theme Toggle Logic
+document.querySelectorAll('[data-theme]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentTheme = btn.dataset.theme;
+        localStorage.setItem('mecano_theme', currentTheme);
+        
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+
+        // Update UI buttons
+        document.querySelectorAll('[data-theme]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        playSound('click');
+    });
+});
