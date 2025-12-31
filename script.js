@@ -1,5 +1,6 @@
 let wordsListES = [];
 let wordsListEN = [];
+let wordsListDE = [];
 
 const storedCount = localStorage.getItem('mecano_word_count');
 let wordCount = (storedCount === 'infinite') ? 'infinite' : (parseInt(storedCount) || 25);
@@ -71,12 +72,14 @@ async function loadWords() {
     try {
         const response = await fetch('words.json');
         const data = await response.json();
-        wordsListES = data.es;
-        wordsListEN = data.en;
+        wordsListES = data.es || [];
+        wordsListEN = data.en || [];
+        wordsListDE = data.de || [];
     } catch (error) {
         console.error('Error loading words:', error);
         wordsListES = ["error", "loading", "words", "check", "console"];
         wordsListEN = ["error", "loading", "words", "check", "console"];
+        wordsListDE = ["fehler", "laden", "wörter", "überprüfen", "konsole"];
         alert("To load words from words.json, you need to run this project on a local server (due to CORS security policies). If you use VS Code, install the 'Live Server' extension and click 'Go Live'.");
     }
 }
@@ -376,7 +379,7 @@ function switchView(newView) {
 
 function generateWords() {
     let generated = [];
-    const list = currentLanguage === 'es' ? wordsListES : wordsListEN;
+    const list = currentLanguage === 'es' ? wordsListES : (currentLanguage === 'de' ? wordsListDE : wordsListEN);
     const count = wordCount === 'infinite' ? 100 : wordCount;
     
     let practiceWords = [];
