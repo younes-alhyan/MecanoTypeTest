@@ -58,5 +58,32 @@
             "lassen", "beginnen", "laufen", "spielen", "zeigen", "bleibt", "vergangenen", "morgen", "gestern",
             "klein", "groß", "neu", "alt", "einfach", "schwer", "lang", "kurz", "richtig", "falsch",
             "heute", "dort", "hierbei", "sicher", "öffentlich", "privat", "regierung", "arbeit", "schule", "familie"
-        ]
+        ],
+    "fr": [
+        "le", "de", "un", "et", "à", "être", "en", "il", "avoir", "que",
+        "pour", "qui", "dans", "ce", "nous", "vous", "ne", "pas", "sur", "se",
+        "par", "au", "elle", "du", "ceci", "mais", "ou", "dont", "une", "comme",
+        "tout", "sera", "y", "dire", "qui", "faire", "quand", "pouvoir", "plus",
+        "si", "non", "homme", "hors", "autre", "alors", "quoi", "temps", "haut",
+        "aller", "à propos", "que", "dans", "pourrait", "état", "seulement", "nouveau",
+        "année", "quelques", "prendre", "venir", "ces", "savoir", "voir", "utiliser",
+        "obtenir", "aimer", "puis", "premier", "tout", "travailler", "maintenant",
+        "pouvoir", "tel", "donner", "sur", "penser", "la plupart", "même", "trouver",
+        "jour", "aussi", "après", "chemin", "beaucoup", "devoir", "regarder", "avant",
+        "grand", "retour", "à travers", "long", "où", "beaucoup", "devrait", "bien",
+        "gens", "bas", "propre", "juste", "parce que", "bon", "chaque", "ceux",
+        "ressentir", "sembler", "comment", "haut", "trop", "endroit", "petit",
+        "monde", "très", "encore", "nation", "main", "vieux", "vie", "dire", "écrire",
+        "devenir", "ici", "montrer", "maison", "les", "deux", "entre", "avoir besoin",
+        "signifier", "appeler", "développer", "sous", "dernier", "droit", "bouger",
+        "chose", "général", "école", "jamais", "même", "autre", "commencer", "pendant",
+        "numéro", "partie", "tourner", "réel", "laisser", "pourrait", "vouloir", "point",
+        "forme", "éteindre", "enfant", "quelques", "petit", "depuis", "contre", "demander",
+        "tard", "maison", "intérêt", "grand", "personne", "fin", "ouvrir", "public",
+        "suivre", "pendant", "présent", "sans", "encore", "tenir", "gouverner", "autour",
+        "possible", "tête", "considérer", "mot", "programme", "problème", "cependant",
+        "mener", "système", "mettre", "ordre", "œil", "plan", "courir", "garder",
+        "visage", "fait", "groupe", "jouer", "tenir", "augmenter", "tôt", "cours",
+        "changer", "aider", "ligne"
+    ]
 }
